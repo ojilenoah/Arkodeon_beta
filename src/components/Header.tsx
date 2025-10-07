@@ -13,7 +13,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="bg-black text-white shadow-md p-2 z-50 relative">
+      <header className="bg-black text-white shadow-md px-2 z-50 relative">
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2 min-w-0">
             <button className="p-2 rounded-full hover:bg-gray-900 flex-shrink-0">
@@ -21,11 +21,11 @@ export default function Header() {
             </button>
             <h1 className="text-xl font-bold truncate">Introduction to Python</h1>
             <button className="p-1 bg-gray-800 rounded-md hover:bg-gray-700 flex-shrink-0">
-              <Image src="/info-icon.svg" alt="Info" width={16} height={16} />
+              <Image src="/info-icon.svg" alt="Info" width={12} height={12} />
             </button>
           </div>
           <div className="flex items-center space-x-2 flex-shrink-0">
-            <div className="flex items-center space-x-2 bg-purple-900 text-white rounded-md px-2 py-1">
+            <div className="flex items-center space-x-2 bg-purple-900 text-white rounded-md px-2 py-1" style={{ transform: 'scale(0.7)' }}>
               <span className="font-bold">1500</span>
               <span>XP</span>
             </div>
@@ -34,7 +34,7 @@ export default function Header() {
             </button>
           </div>
         </div>
-        <div className="flex items-center justify-between mt-1">
+        <div className="flex items-center justify-between -mt-2">
           <div className="flex items-center space-x-2 min-w-0">
             <button onClick={toggleSidebar} className="p-2 rounded-full hover:bg-gray-900 flex-shrink-0">
               <Image src="/sidebar-icon.svg" alt="Sidebar" width={24} height={24} />
@@ -49,7 +49,7 @@ export default function Header() {
         </div>
       </header>
       <Sidebar isOpen={isSidebarOpen} />
-      {isSidebarOpen && <div onClick={toggleSidebar} className="fixed inset-0 bg-black opacity-50 z-40 top-[4.75rem]"></div>}
+      {isSidebarOpen && <div onClick={toggleSidebar} className="fixed inset-0 bg-black opacity-50 z-40 top-[4.5rem]"></div>}
     </>
   )
 }

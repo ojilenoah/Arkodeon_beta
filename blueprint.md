@@ -6,22 +6,37 @@ This document outlines the plan, features, and design of a Next.js application. 
 
 ## Current Plan
 
-### Adjust Sidebar Position and Style
+### Accordion Polish
 
-**Objective:** Modify the sidebar to open below the header and match its background color.
+**Objective:** Add a click-away-to-close feature and a smooth exit animation to the accordion.
 
-*   **Positioning:** The sidebar and its overlay should appear below the header, leaving the header visible and interactive.
-*   **Styling:** The sidebar's background color will be changed to pure black (`bg-black`).
+*   **Click-Away to Close:** Clicking anywhere outside of the open accordion will close it.
+*   **Smooth Exit Animation:** A fade-out and slide-down animation will be added for a smoother closing transition.
 
 **Steps:**
 
-1.  **Update `src/components/Sidebar.tsx`:**
-    *   Modify the `className` to change the background to `bg-black`.
-    *   Adjust the positioning classes to make the sidebar render below the header (e.g., using `top-[4.5rem]`).
-2.  **Update `src/components/Header.tsx`:**
-    *   Modify the overlay `div`'s classes to match the sidebar's new vertical position.
+1.  **Update `src/components/ContinueAccordion.tsx`:** An event listener will be added to detect and handle clicks outside of the component, and CSS transitions will be refined for a polished open/close animation.
 
 ## Implemented Features
+
+### Floating Accordion Button v2
+
+*   Compact, centered, and visually seamless design.
+*   Reduced padding and moved closer to the bottom of the page.
+
+### Floating Accordion Button v1
+
+*   A floating button on the bottom-right opens an accordion with question and maintrack options.
+
+### Iconography Refinements
+
+*   **Cube Icon:** The lines of the cube icon within the "Bits" badge will be made thicker.
+*   **Info Icon:** The "i" character within the info icon will be made extra bold, and the surrounding button will be made smaller.
+
+### Sidebar Component v2
+
+*   Sidebar opens below the header.
+*   Background color is pure black (`bg-black`).
 
 ### Sidebar Component v1
 

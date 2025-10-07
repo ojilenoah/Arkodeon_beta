@@ -1,4 +1,5 @@
 import Header from '../components/Header';
+import ContinueAccordion from '../components/ContinueAccordion';
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
         <h1 className="text-2xl font-bold">Welcome to the Course!</h1>
         <p>This is the main content area.</p>
       </main>
+      <ContinueAccordion />
     </div>
   );
 }
